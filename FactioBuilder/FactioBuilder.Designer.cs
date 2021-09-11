@@ -29,38 +29,38 @@ namespace FactioBuilder
         /// </summary>
         private void InitializeComponent()
         {
-            this.AndroidBuild = new System.Windows.Forms.Button();
-            this.WindowsBuild = new System.Windows.Forms.Button();
+            this.AndroidBuildButton = new System.Windows.Forms.Button();
+            this.WindowsBuildButton = new System.Windows.Forms.Button();
             this.BuildProgressBar = new System.Windows.Forms.ProgressBar();
-            this.Quit = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.QuitButton = new System.Windows.Forms.Button();
+            this.ConnectButton = new System.Windows.Forms.Button();
             this.FactioBuilderText = new System.Windows.Forms.Label();
             this.MessagesListBox = new System.Windows.Forms.ListBox();
             this.AndroidDowloadCheckBox = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.WindowsDownloadCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // AndroidBuild
+            // AndroidBuildButton
             // 
-            this.AndroidBuild.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(220)))), ((int)(((byte)(132)))));
-            this.AndroidBuild.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.AndroidBuild.Location = new System.Drawing.Point(12, 202);
-            this.AndroidBuild.Name = "AndroidBuild";
-            this.AndroidBuild.Size = new System.Drawing.Size(150, 50);
-            this.AndroidBuild.TabIndex = 0;
-            this.AndroidBuild.Text = "Android Build";
-            this.AndroidBuild.UseVisualStyleBackColor = false;
+            this.AndroidBuildButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(220)))), ((int)(((byte)(132)))));
+            this.AndroidBuildButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AndroidBuildButton.Location = new System.Drawing.Point(12, 202);
+            this.AndroidBuildButton.Name = "AndroidBuildButton";
+            this.AndroidBuildButton.Size = new System.Drawing.Size(150, 50);
+            this.AndroidBuildButton.TabIndex = 0;
+            this.AndroidBuildButton.Text = "Android Build";
+            this.AndroidBuildButton.UseVisualStyleBackColor = false;
             // 
-            // WindowsBuild
+            // WindowsBuildButton
             // 
-            this.WindowsBuild.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(239)))));
-            this.WindowsBuild.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.WindowsBuild.Location = new System.Drawing.Point(338, 202);
-            this.WindowsBuild.Name = "WindowsBuild";
-            this.WindowsBuild.Size = new System.Drawing.Size(150, 50);
-            this.WindowsBuild.TabIndex = 1;
-            this.WindowsBuild.Text = "Windows Build";
-            this.WindowsBuild.UseVisualStyleBackColor = false;
+            this.WindowsBuildButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(239)))));
+            this.WindowsBuildButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.WindowsBuildButton.Location = new System.Drawing.Point(338, 202);
+            this.WindowsBuildButton.Name = "WindowsBuildButton";
+            this.WindowsBuildButton.Size = new System.Drawing.Size(150, 50);
+            this.WindowsBuildButton.TabIndex = 1;
+            this.WindowsBuildButton.Text = "Windows Build";
+            this.WindowsBuildButton.UseVisualStyleBackColor = false;
             // 
             // BuildProgressBar
             // 
@@ -69,32 +69,33 @@ namespace FactioBuilder
             this.BuildProgressBar.Size = new System.Drawing.Size(476, 25);
             this.BuildProgressBar.TabIndex = 2;
             // 
-            // Quit
+            // QuitButton
             // 
-            this.Quit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(53)))), ((int)(((byte)(64)))));
-            this.Quit.FlatAppearance.BorderSize = 0;
-            this.Quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Quit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Quit.Location = new System.Drawing.Point(433, 12);
-            this.Quit.Name = "Quit";
-            this.Quit.Size = new System.Drawing.Size(55, 30);
-            this.Quit.TabIndex = 3;
-            this.Quit.Text = "Quit";
-            this.Quit.UseVisualStyleBackColor = false;
-            this.Quit.Click += new System.EventHandler(this.Quit_Click);
+            this.QuitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(53)))), ((int)(((byte)(64)))));
+            this.QuitButton.FlatAppearance.BorderSize = 0;
+            this.QuitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.QuitButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.QuitButton.Location = new System.Drawing.Point(433, 12);
+            this.QuitButton.Name = "QuitButton";
+            this.QuitButton.Size = new System.Drawing.Size(55, 30);
+            this.QuitButton.TabIndex = 3;
+            this.QuitButton.Text = "Quit";
+            this.QuitButton.UseVisualStyleBackColor = false;
+            this.QuitButton.Click += new System.EventHandler(this.QuitButton_Click);
             // 
-            // button1
+            // ConnectButton
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(255)))), ((int)(((byte)(51)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 30);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Connect";
-            this.button1.UseVisualStyleBackColor = false;
+            this.ConnectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(255)))), ((int)(((byte)(51)))));
+            this.ConnectButton.FlatAppearance.BorderSize = 0;
+            this.ConnectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ConnectButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ConnectButton.Location = new System.Drawing.Point(12, 12);
+            this.ConnectButton.Name = "ConnectButton";
+            this.ConnectButton.Size = new System.Drawing.Size(90, 30);
+            this.ConnectButton.TabIndex = 4;
+            this.ConnectButton.Text = "Connect";
+            this.ConnectButton.UseVisualStyleBackColor = false;
+            this.ConnectButton.Click += new System.EventHandler(this.ConnectButton_Click);
             // 
             // FactioBuilderText
             // 
@@ -132,17 +133,17 @@ namespace FactioBuilder
             this.AndroidDowloadCheckBox.Text = "Android Download";
             this.AndroidDowloadCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // WindowsDownloadCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
-            this.checkBox1.Location = new System.Drawing.Point(338, 258);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(136, 19);
-            this.checkBox1.TabIndex = 9;
-            this.checkBox1.Text = "Windows Download";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.WindowsDownloadCheckBox.AutoSize = true;
+            this.WindowsDownloadCheckBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.WindowsDownloadCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.WindowsDownloadCheckBox.Location = new System.Drawing.Point(338, 258);
+            this.WindowsDownloadCheckBox.Name = "WindowsDownloadCheckBox";
+            this.WindowsDownloadCheckBox.Size = new System.Drawing.Size(136, 19);
+            this.WindowsDownloadCheckBox.TabIndex = 9;
+            this.WindowsDownloadCheckBox.Text = "Windows Download";
+            this.WindowsDownloadCheckBox.UseVisualStyleBackColor = true;
             // 
             // FactioBuilder
             // 
@@ -150,15 +151,15 @@ namespace FactioBuilder
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
             this.ClientSize = new System.Drawing.Size(500, 321);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.WindowsDownloadCheckBox);
             this.Controls.Add(this.AndroidDowloadCheckBox);
             this.Controls.Add(this.MessagesListBox);
             this.Controls.Add(this.FactioBuilderText);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.Quit);
+            this.Controls.Add(this.ConnectButton);
+            this.Controls.Add(this.QuitButton);
             this.Controls.Add(this.BuildProgressBar);
-            this.Controls.Add(this.WindowsBuild);
-            this.Controls.Add(this.AndroidBuild);
+            this.Controls.Add(this.WindowsBuildButton);
+            this.Controls.Add(this.AndroidBuildButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FactioBuilder";
             this.Text = "Factio Builder";
@@ -171,15 +172,15 @@ namespace FactioBuilder
 
         #endregion
 
-        private System.Windows.Forms.Button AndroidBuild;
-        private System.Windows.Forms.Button WindowsBuild;
+        private System.Windows.Forms.Button AndroidBuildButton;
+        private System.Windows.Forms.Button WindowsBuildButton;
         private System.Windows.Forms.ProgressBar BuildProgressBar;
-        private System.Windows.Forms.Button Quit;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button QuitButton;
+        private System.Windows.Forms.Button ConnectButton;
         private System.Windows.Forms.Label FactioBuilderText;
         private System.Windows.Forms.ListBox MessagesListBox;
         private System.Windows.Forms.CheckBox AndroidDowloadCheckBox;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox WindowsDownloadCheckBox;
     }
 }
 

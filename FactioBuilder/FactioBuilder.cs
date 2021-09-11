@@ -26,6 +26,8 @@ namespace FactioBuilder
         private int messageLine = 0;
 
         private MetaMitClient client;
+        private bool isConnecting = false;
+        private bool isConnected = false;
 
         public FactioBuilder()
         {
@@ -38,32 +40,8 @@ namespace FactioBuilder
             client.Connected += OnConnected;
             client.DataSent += OnDataSent;
             client.Disconnected += OnDisconnected;
-            client.Connect(Constants.Ip, Constants.Port);
             SetTimer();
-        }
-
-        private void OnConnected(object sender, MetaMitStandard.Client.ConnectedEventArgs e)
-        {
-
-        }
-
-        private void OnDataSent(object sender, MetaMitStandard.Client.DataSentEventArgs e)
-        {
-
-        }
-
-        private void OnDisconnected(object sender, MetaMitStandard.Client.DisconnectedEventArgs e)
-        {
-
-        }
-
-        private void FactioBuilder_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
-            }
+            SendMessage("Click \"Connect\" to connect!");
         }
 
         private void SetTimer()
@@ -75,12 +53,29 @@ namespace FactioBuilder
 
         private void TimerTick(object sender, EventArgs e)
         {
-            SendMessage("Hello?");
+            //SendMessage("Hello?");
+        }
+
+        private void OnConnected(object sender, MetaMitStandard.Client.ConnectedEventArgs e)
+        {
+            isConnecting = false;
+            isConnected = true;
+            SendMessage($"Connected to {Constants.Ip}:{Constants.Port}!");
+        }
+        private void OnDataSent(object sender, MetaMitStandard.Client.DataSentEventArgs e)
+        {
+
+        }
+        private void OnDisconnected(object sender, MetaMitStandard.Client.DisconnectedEventArgs e)
+        {
+            isConnecting = false;
+            isConnected = false;
+            SendMessage($"Disconnected from {Constants.Ip}:{Constants.Port}!");
         }
 
         private void SendMessage(string message)
         {
-            queuedMessages.Enqueue($"{messageLine}: {message}");
+            queuedMessages.Enqueue($"L{messageLine}: {message}");
             messageLine++;
             int visibleItems = MessagesListBox.ClientSize.Height / MessagesListBox.ItemHeight;
             int topIndex = Math.Max(MessagesListBox.Items.Count - visibleItems + 1, 0);
@@ -92,8 +87,35 @@ namespace FactioBuilder
             MessagesListBox.TopIndex = topIndex;
         }
 
-        private void Quit_Click(object sender, EventArgs e)
+
+
+
+
+
+        private void FactioBuilder_MouseDown(object sender, MouseEventArgs e)
         {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        private void ConnectButton_Click(object sender, EventArgs e)
+        {
+            if (isConnecting)
+            {
+                SendMessage($"Already connecting to {Constants.Ip}:{Constants.Port}...");
+                return;
+            }
+            client.Connect(Constants.Ip, Constants.Port);
+            isConnecting = true;
+            SendMessage($"Connecting to {Constants.Ip}:{Constants.Port}...");
+        }
+        private void QuitButton_Click(object sender, EventArgs e)
+        {
+            if (isConnected)
+                client.Disconnect();
             Application.Exit();
         }
     }
