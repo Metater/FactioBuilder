@@ -36,13 +36,15 @@ namespace FactioBuilder
             this.button1 = new System.Windows.Forms.Button();
             this.FactioBuilderText = new System.Windows.Forms.Label();
             this.MessagesListBox = new System.Windows.Forms.ListBox();
+            this.AndroidDowloadCheckBox = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // AndroidBuild
             // 
             this.AndroidBuild.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(220)))), ((int)(((byte)(132)))));
             this.AndroidBuild.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.AndroidBuild.Location = new System.Drawing.Point(12, 168);
+            this.AndroidBuild.Location = new System.Drawing.Point(12, 202);
             this.AndroidBuild.Name = "AndroidBuild";
             this.AndroidBuild.Size = new System.Drawing.Size(150, 50);
             this.AndroidBuild.TabIndex = 0;
@@ -53,7 +55,7 @@ namespace FactioBuilder
             // 
             this.WindowsBuild.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(239)))));
             this.WindowsBuild.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.WindowsBuild.Location = new System.Drawing.Point(322, 168);
+            this.WindowsBuild.Location = new System.Drawing.Point(338, 202);
             this.WindowsBuild.Name = "WindowsBuild";
             this.WindowsBuild.Size = new System.Drawing.Size(150, 50);
             this.WindowsBuild.TabIndex = 1;
@@ -62,9 +64,9 @@ namespace FactioBuilder
             // 
             // BuildProgressBar
             // 
-            this.BuildProgressBar.Location = new System.Drawing.Point(12, 224);
+            this.BuildProgressBar.Location = new System.Drawing.Point(12, 283);
             this.BuildProgressBar.Name = "BuildProgressBar";
-            this.BuildProgressBar.Size = new System.Drawing.Size(460, 25);
+            this.BuildProgressBar.Size = new System.Drawing.Size(476, 25);
             this.BuildProgressBar.TabIndex = 2;
             // 
             // Quit
@@ -73,7 +75,7 @@ namespace FactioBuilder
             this.Quit.FlatAppearance.BorderSize = 0;
             this.Quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Quit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Quit.Location = new System.Drawing.Point(417, 12);
+            this.Quit.Location = new System.Drawing.Point(433, 12);
             this.Quit.Name = "Quit";
             this.Quit.Size = new System.Drawing.Size(55, 30);
             this.Quit.TabIndex = 3;
@@ -107,21 +109,49 @@ namespace FactioBuilder
             // MessagesListBox
             // 
             this.MessagesListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(181)))));
+            this.MessagesListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MessagesListBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.MessagesListBox.FormattingEnabled = true;
             this.MessagesListBox.ItemHeight = 15;
-            this.MessagesListBox.Location = new System.Drawing.Point(12, 53);
+            this.MessagesListBox.Location = new System.Drawing.Point(12, 48);
             this.MessagesListBox.Name = "MessagesListBox";
-            this.MessagesListBox.Size = new System.Drawing.Size(460, 109);
+            this.MessagesListBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MessagesListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.MessagesListBox.Size = new System.Drawing.Size(476, 150);
             this.MessagesListBox.TabIndex = 7;
-            this.MessagesListBox.Enter += new System.EventHandler(this.MessagesListBox_Enter);
+            // 
+            // AndroidDowloadCheckBox
+            // 
+            this.AndroidDowloadCheckBox.AutoSize = true;
+            this.AndroidDowloadCheckBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AndroidDowloadCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.AndroidDowloadCheckBox.Location = new System.Drawing.Point(12, 258);
+            this.AndroidDowloadCheckBox.Name = "AndroidDowloadCheckBox";
+            this.AndroidDowloadCheckBox.Size = new System.Drawing.Size(129, 19);
+            this.AndroidDowloadCheckBox.TabIndex = 8;
+            this.AndroidDowloadCheckBox.Text = "Android Download";
+            this.AndroidDowloadCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.checkBox1.Location = new System.Drawing.Point(338, 258);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(136, 19);
+            this.checkBox1.TabIndex = 9;
+            this.checkBox1.Text = "Windows Download";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // FactioBuilder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
-            this.ClientSize = new System.Drawing.Size(484, 261);
+            this.ClientSize = new System.Drawing.Size(500, 321);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.AndroidDowloadCheckBox);
             this.Controls.Add(this.MessagesListBox);
             this.Controls.Add(this.FactioBuilderText);
             this.Controls.Add(this.button1);
@@ -135,6 +165,7 @@ namespace FactioBuilder
             this.Load += new System.EventHandler(this.FactioBuilder_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FactioBuilder_MouseDown);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -147,6 +178,8 @@ namespace FactioBuilder
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label FactioBuilderText;
         private System.Windows.Forms.ListBox MessagesListBox;
+        private System.Windows.Forms.CheckBox AndroidDowloadCheckBox;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
