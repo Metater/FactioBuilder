@@ -31,7 +31,7 @@ namespace FactioBuilder
         {
             this.AndroidBuild = new System.Windows.Forms.Button();
             this.WindowsBuild = new System.Windows.Forms.Button();
-            this.Build = new System.Windows.Forms.ProgressBar();
+            this.BuildProgressBar = new System.Windows.Forms.ProgressBar();
             this.Quit = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.FactioBuilderText = new System.Windows.Forms.Label();
@@ -60,12 +60,12 @@ namespace FactioBuilder
             this.WindowsBuild.Text = "Windows Build";
             this.WindowsBuild.UseVisualStyleBackColor = false;
             // 
-            // Build
+            // BuildProgressBar
             // 
-            this.Build.Location = new System.Drawing.Point(12, 224);
-            this.Build.Name = "Build";
-            this.Build.Size = new System.Drawing.Size(460, 25);
-            this.Build.TabIndex = 2;
+            this.BuildProgressBar.Location = new System.Drawing.Point(12, 224);
+            this.BuildProgressBar.Name = "BuildProgressBar";
+            this.BuildProgressBar.Size = new System.Drawing.Size(460, 25);
+            this.BuildProgressBar.TabIndex = 2;
             // 
             // Quit
             // 
@@ -126,7 +126,7 @@ namespace FactioBuilder
             this.Controls.Add(this.FactioBuilderText);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Quit);
-            this.Controls.Add(this.Build);
+            this.Controls.Add(this.BuildProgressBar);
             this.Controls.Add(this.WindowsBuild);
             this.Controls.Add(this.AndroidBuild);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -142,7 +142,7 @@ namespace FactioBuilder
 
         private System.Windows.Forms.Button AndroidBuild;
         private System.Windows.Forms.Button WindowsBuild;
-        private System.Windows.Forms.ProgressBar Build;
+        private System.Windows.Forms.ProgressBar BuildProgressBar;
         private System.Windows.Forms.Button Quit;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label FactioBuilderText;
